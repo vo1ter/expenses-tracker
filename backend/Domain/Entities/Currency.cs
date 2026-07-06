@@ -4,7 +4,7 @@ namespace backend.Domain.Entities;
 
 public class Currency
 {
-    public Currency(char symbol, string isoSymbol, string fullName)
+    public Currency(string symbol, string isoSymbol, string fullName)
     {
         var allCurrencies = CurrencyHelpers.GetAllCurrencies();
         
@@ -37,7 +37,7 @@ public class Currency
     
     private Currency() { }
     
-    public char Symbol { get; private set; }
+    public string Symbol { get; private set; }
     public string IsoSymbol { get; private set; }
     public string FullName { get; private set; }
 }
